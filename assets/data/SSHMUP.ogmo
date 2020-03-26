@@ -1,0 +1,278 @@
+{
+  "name": "SSHMUP",
+  "ogmoVersion": "3.3.0",
+  "levelPaths": ["."],
+  "backgroundColor": "#282c34ff",
+  "gridColor": "#3c4049cc",
+  "anglesRadians": true,
+  "directoryDepth": 5,
+  "layerGridDefaultSize": {"x": 8, "y": 8},
+  "levelDefaultSize": {"x": 320, "y": 240},
+  "levelMinSize": {"x": 320, "y": 1024},
+  "levelMaxSize": {"x": 320, "y": 1024},
+  "levelValues": [],
+  "defaultExportMode": ".json",
+  "compactExport": false,
+  "externalScript": "",
+  "playCommand": "",
+  "entityTags": ["gameplay", "animatedTiles"],
+  "layers": [
+    {
+      "definition": "entity",
+      "name": "entities",
+      "gridSize": {"x": 8, "y": 8},
+      "exportID": "23494566",
+      "requiredTags": ["gameplay"],
+      "excludedTags": []
+    },
+    {
+      "definition": "entity",
+      "name": "animatedTiles",
+      "gridSize": {"x": 16, "y": 16},
+      "exportID": "25860538",
+      "requiredTags": ["animatedTiles"],
+      "excludedTags": []
+    },
+    {
+      "definition": "tile",
+      "name": "walls",
+      "gridSize": {"x": 16, "y": 16},
+      "exportID": "22355822",
+      "exportMode": 0,
+      "arrayMode": 0,
+      "defaultTileset": "desert"
+    }
+  ],
+  "entities": [
+    {
+      "exportID": "22308143",
+      "name": "player",
+      "limit": -1,
+      "size": {"x": 32, "y": 32},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#0091ffff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 32, "y": 32},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["gameplay"],
+      "values": []
+    },
+    {
+      "exportID": "22301207",
+      "name": "drone",
+      "limit": -1,
+      "size": {"x": 32, "y": 32},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 32, "y": 32},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["gameplay"],
+      "values": [
+        {"name": "direction", "definition": "Integer", "defaults": 1, "bounded": false, "min": 0, "max": 100}
+      ]
+    },
+    {
+      "exportID": "22316865",
+      "name": "boss",
+      "limit": -1,
+      "size": {"x": 256, "y": 32},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#580000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 256, "y": 32},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["gameplay"],
+      "values": [
+        {"name": "bossnum", "definition": "Integer", "defaults": 0, "bounded": false, "min": 0, "max": 99999}
+      ]
+    },
+    {
+      "exportID": "22313756",
+      "name": "bossspawn",
+      "limit": -1,
+      "size": {"x": 640, "y": 16},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#7a0c0cff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 640, "y": 16},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["gameplay"],
+      "values": []
+    },
+    {
+      "exportID": "22314303",
+      "name": "copter",
+      "limit": -1,
+      "size": {"x": 32, "y": 32},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#4a8600ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 32, "y": 32},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["gameplay"],
+      "values": []
+    },
+    {
+      "exportID": "22328758",
+      "name": "animatedTile",
+      "limit": -1,
+      "size": {"x": 16, "y": 16},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 32, "y": 32},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["animatedTiles"],
+      "values": [
+        {"name": "assetPath", "definition": "String", "defaults": "assets/images/Player.png", "maxLength": 0, "trimWhitespace": true},
+        {"name": "offsetX", "definition": "Integer", "defaults": 0, "bounded": false, "min": 0, "max": 100},
+        {"name": "offsetY", "definition": "Integer", "defaults": 0, "bounded": false, "min": 0, "max": 100},
+        {"name": "frameRate", "definition": "Integer", "defaults": 0, "bounded": false, "min": 0, "max": 100},
+        {"name": "totalFrame", "definition": "Integer", "defaults": 0, "bounded": false, "min": 0, "max": 100}
+      ]
+    }
+  ],
+  "tilesets": [
+    {"label": "desert", "path": "../images/tilesets/desert.png", "image": "data:image/png;base64,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", "tileWidth": 16, "tileHeight": 16, "tileSeparationX": 0, "tileSeparationY": 0},
+    {"label": "tiles", "path": "../images/tilesets/tiles.png", "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAQCAYAAABQrvyxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODRBQjNDODZENDhCMTFFMzk5N0RDMzAxQTc5NEM5RkMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODRBQjNDODdENDhCMTFFMzk5N0RDMzAxQTc5NEM5RkMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4NEFCM0M4NEQ0OEIxMUUzOTk3REMzMDFBNzk0QzlGQyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4NEFCM0M4NUQ0OEIxMUUzOTk3REMzMDFBNzk0QzlGQyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrOLMN8AAACUSURBVHja7JWhDoAgEEBPRrERbVYCX+If8Z8Eqo2IyYi7wOYYTncYuI3XD94bDKaUErSwWZtWY0izu3NAnc3zEhpBAVyIQvAeWuKPEEAAQ7I8IjjLswso5RHZq2iNUp7lFRoBI2AEQN+vEL5A+EM/MSvV7wm8ySNnjH0GfJGvRQhu8mWE/GPz2g/5hUVrkvw94hJgALO2Vr1s43dIAAAAAElFTkSuQmCC", "tileWidth": 16, "tileHeight": 16, "tileSeparationX": 0, "tileSeparationY": 0}
+  ]
+}
